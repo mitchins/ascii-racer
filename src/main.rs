@@ -152,10 +152,10 @@ impl Renderer {
             .request_adapter(&wgpu::RequestAdapterOptions {
                 power_preference: wgpu::PowerPreference::default(),
                 compatible_surface: None,
-                force_fallback_adapter: false,
+                force_fallback_adapter: true,
             })
             .await
-            .unwrap();
+            .expect("Failed to find an appropriate adapter");
 
         let (device, queue) = adapter
             .request_device(
