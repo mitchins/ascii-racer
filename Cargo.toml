@@ -1,0 +1,12 @@
+[package]
+name = "ascii-racer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wgpu = "22.1"
+pollster = "0.3"
+bytemuck = { version = "1.14", features = ["derive"] }
+crossterm = "0.28"
+glam = "0.29"
+futures-intrusive = "0.5"
